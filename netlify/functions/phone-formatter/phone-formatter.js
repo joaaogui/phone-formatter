@@ -5,7 +5,7 @@ const handler = async (event) => {
 
     return {
       statusCode: 200,
-      body: body.phone.replace(/\s/g, '').replace('-', '').replace(/\(.*\)/, '')
+      body: body.phone.replace(/\s/g, '').replace('-', '')
     }
   } catch (error) {
     return { statusCode: 500, body: error.toString() }
